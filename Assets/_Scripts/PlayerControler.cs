@@ -9,14 +9,11 @@ public class PlayerControler : MonoBehaviour
     Vector2 rotate;
 
     Rigidbody rb;
-<<<<<<< Updated upstream
-=======
+
 
     Rigidbody rig;
     private float jumpSpeed = 5f;
-
-
->>>>>>> Stashed changes
+    
 
     private float distanceToGround;
 
@@ -30,40 +27,34 @@ public class PlayerControler : MonoBehaviour
 
 
 
-=======
+
     //public GameObject projectile;
     //public Transform projectilePos;
 
     [SerializeField]private Weapon weapon;
     private bool isAttacking;
 
-
-    private float distanceToGround;
+    
     bool isGrounded;
     public float jump = 5f;
-    public float walkSpeed = 5f;
-  
-    private Animator playerAnimator;
+    
 
      public float health { get; set; }
-
->>>>>>> Stashed changes
+     
     // Health testing
     //CharacterStats cs;
 
     private void Awake() {
         rb = GetComponent<Rigidbody>();
         Inputs.Init(this);
-
-<<<<<<< Updated upstream
+            
 
 
 
 
         // cameraRotation = new Vector3(transform.rotation.x, transform.rotation.y, transform.rotation.z);
         // Cursor.lockState = CursorLockMode.Locked;
-=======
->>>>>>> Stashed changes
+
     }
 
 
@@ -79,13 +70,10 @@ public class PlayerControler : MonoBehaviour
         isGrounded = Physics.Raycast(transform.position, -Vector3.up,GetComponent<Collider>().bounds.extents.y);
 
     }
-
-<<<<<<< Updated upstream
+    
     private void OnDisable() {
         inputAction.Player.Disable();
     }
-=======
->>>>>>> Stashed changes
 
     public void Jump()
 
@@ -102,7 +90,7 @@ public class PlayerControler : MonoBehaviour
     }
 
 
-<<<<<<< Updated upstream
+
     public void Shoot()
     {
         Rigidbody rbBullet = Instantiate(projectile, projectilePos.position, Quaternion.identity).GetComponent<Rigidbody>();
@@ -135,7 +123,7 @@ public class PlayerControler : MonoBehaviour
     // private void OnCollisionEnter(Collision other) {
     //     Debug.Log("player"+other.gameObject.tag);
     //     isGrounded = true;
-=======
+
     public  void shoot()
     {
         isAttacking = !isAttacking;
@@ -156,7 +144,7 @@ public class PlayerControler : MonoBehaviour
 
     }
 
->>>>>>> Stashed changes
+
  
     // }
     // private void OnCollisionExit(Collision other) {
